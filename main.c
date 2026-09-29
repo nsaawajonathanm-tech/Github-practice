@@ -3,25 +3,22 @@
 
 int main()
 {
-    //INPUT,PROCESS,OUTPUT
-
-   //Read 2 integers, display their sum, product, difference, quotient and remainder, ex. 2.16, ch.2
-   int A,B,sum,product,difference,quotient,remainder;
-    printf("Enter integer A: \n");
+    //DECISION (if, else if, else if)--ex.2.29,pg 135, ch. 2
+    //Display 3 numbers in increasing order
+    int A,B,C;
+    printf("Enter the first number:\n");
     scanf("%d",&A);
-    printf("Enter integer B: \n");
+    printf("Enter the second number:\n");
     scanf("%d",&B);
-    sum = A+B;
-    product = A*B;
-    difference = (A-B);
-    quotient = A/B;
-    remainder = A%B;
-    printf("The sum is = %d\n",sum);
-    printf("The product is = %d\n",product);
-    printf("The difference is = %d\n",difference);
-    printf("The quotient is = %d\n",quotient);
-    printf("The remainder is = %d\n",remainder);
-
+    printf("Enter the third number:\n");
+    scanf("%d",&C);
+    if (A>B&&B>C){printf("%d,%d,%d",C,B,A);}
+        else if (A>B&&C>B){printf("%d,%d,%d",B,C,A);}
+        else if (B>A&&A>C) {printf("%d,%d,%d",C,A,B);}
+       else if  (B>C&&C>A) {printf("%d,%d,%d",A,C,B);}
+        else if (C>A&&A>B) {printf("%d,%d,%d",B,A,C);}
+       else if (C>B&&B>A) {printf("%d,%d,%d",A,B,C);}
+       else {printf("Duplicate numbers detected");}
 
 
     return 0;
