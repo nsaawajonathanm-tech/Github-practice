@@ -3,12 +3,27 @@
 
 int main()
 {
-    //Loop with decision
-    //PRINT 500$ SIGNS, ex. 3.37(p.182)
-    int count;
-    for (count=1; count<=500;count++)
-    {printf("$ ");
-    if (count%50==0){printf("\n");}}
+    //Interactive console program(menu/sentinel+loop + decision----switch, break
+    //Ex.3.20(p.178)
+       //SALARY CALCULATOR
+       //Determine the gross pay for each of several employees.
+      double salary,rate,hours;
+printf("Enter the number of hours worked(-1 to end):\n");
+        scanf("%lf",&hours);
+      while (hours!=-1){
+
+
+        printf("Enter the hourly rate:\n");
+        scanf("%lf",&rate);
+
+         if (hours>40){
+         salary= 40*rate+ (hours-40)*rate*1.5;}
+         else{salary=hours*rate;}
+         printf("Salary is $%.2lf\n",salary);
+printf("Enter the number of hours worked(-1 to end):\n");
+        scanf("%lf",&hours);
+      }
+
 
     return 0;
 }
